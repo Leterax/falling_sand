@@ -19,10 +19,10 @@ in vec2 uv0;
 
 void main() {
     uvec4 particle = texture(texture0, uv0);
-    if (particle.r != 0) {
+    if (particle.r == 1) { // sand
         fragColor = vec4(1., .5, 0., 1.);
     }
-    else {
+    else { // not sand
         fragColor = vec4(.5, .5, .5, 1.);
     }
 }
